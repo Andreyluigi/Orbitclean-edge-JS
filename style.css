@@ -616,3 +616,51 @@ footer {
     padding: 2rem 1.5rem;
   }
 }
+.theme-selector {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  margin-left: .5rem;
+}
+
+.theme-btn {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.2);
+}
+
+.theme-btn.active {
+  border: 2px solid var(--accent);
+}
+
+#theme-space { background: #0d1117; }
+#theme-eclipse { background: #000000; }
+#theme-ground { background: #f8f9fa; }
+
+/* Definição das paletas dos novos temas */
+body.theme-eclipse-active {
+  --bg: #000000;
+  --bg2: #05070a;
+  --border: #161b22;
+  --fg: #ffffff;
+  --accent: #00ff66; /* Verde Neon para diferenciar */
+}
+
+body.theme-ground-active {
+  --bg: #f8f9fa;
+  --bg2: #ffffff;
+  --border: #d0d7de;
+  --fg: #24292f;
+  --fg2: #57606a;
+  --accent: #0969da; /* Azul Corporativo */
+}
+header.theme-ground-header {
+  background: rgba(248, 249, 250, 0.92) !important;
+}
