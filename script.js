@@ -59,3 +59,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+//formulario
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("satelliteForm");
+  const successBox = document.getElementById("formSuccess");
+
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); 
+      
+      let isValid = true;
+
+      const fields = [
+        { id: "nome_operadora", errorId: "err_nome" },
+        { id: "email_contato", errorId: "err_email" },
+        { id: "qtd_satelites", errorId: "err_qtd" }
+      ];
+
+      fields.forEach(field => {
+        const input = document.getElementById(field.id);
+        const errorSpan = document.getElementById(field.errorId);
+
+        if (input && errorSpan) {
+          if (input.value.trim() === "") {
+            input.classList.add("input-error");
+            errorSpan.style.display = "block";
+            isValid = false;
+          } else {
+            input.classList.remove("input-error");
+            errorSpan.style.display = "none";
+          }
+        }
+      });
+
+      if (isValid) {
+        successBox.style.display = "block";
+        form.reset();
+        
+
+        setTimeout(() => {
+          successBox.style.display = "none";
+        }, 5000);
+      }
+    });
+  }
+});
