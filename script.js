@@ -23,4 +23,4 @@ function goSlide(n) {
   updateSlide();
 }
 
-setInterval(slideNext, 5000);
+setInterval(slideNext, 6000);
