@@ -20,6 +20,7 @@
         <a href="#publico">Público</a>
         <a href="#beneficios">Benefícios</a>
         <a href="#aplicacao">Aplicação</a>
+        <a href="#contato">Contato</a>
       </nav>
       <div class="theme-selector" aria-label="Seletor de temas de cor">
         <button class="theme-btn active" id="theme-space" title="Tema Espacial"></button>
@@ -349,6 +350,41 @@
         alt="Gráfico do crescimento exponencial de detritos espaciais pela Síndrome de Kessler"
         class="section-img"
       />
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">07</span>
+        <h2>Inscreva sua Operadora</h2>
+      </div>
+      <p class="sec-lead">Garante a simulação de resiliência e receba um relatório completo de vulnerabilidade orbital para a sua frota.</p>
+      
+      <div class="form-wrapper">
+        <form id="satelliteForm" novalidate>
+          <div class="form-group">
+            <label for="nome_operadora">Nome da Operadora / Instituição</label>
+            <input type="text" id="nome_operadora" name="nome_operadora" placeholder="Ex: SpaceX, NASA, AEB...">
+            <span class="error-message" id="err_nome">Este campo não pode ficar vazio.</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="email_contato">E-mail Corporativo</label>
+            <input type="email" id="email_contato" name="email_contato" placeholder="nome@instituicao.com">
+            <span class="error-message" id="err_email">Insira um e-mail corporativo válido.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="qtd_satelites">Quantidade de Satélites em Órbita</label>
+            <input type="number" id="qtd_satelites" name="qtd_satelites" placeholder="Ex: 12">
+            <span class="error-message" id="err_qtd">Por favor, informe a quantidade de ativos.</span>
+          </div>
+
+          <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer; margin-top: 1rem;">Solicitar Diagnóstico Orbital</button>
+        </form>
+        <div id="formSuccess" class="success-box">🛰️ Conexão estabelecida! Solicitação enviada com sucesso para a rede mesh.</div>
+      </div>
     </div>
   </section>
 
